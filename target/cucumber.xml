@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="9" time="0.046426">
+<testcase classname="Cocktail Ordering Factored" name="Sending a message with an order" time="0.018441">
+<system-out><![CDATA[Given Romeo buy a drink.....................................................passed
+When an order is declared for Juliette......................................passed
+And a message saying "Wanna chat si zebi?" is added.........................passed
+Then the ticket must say "From Romeo to Juliette: Wanna chat si zebi?"......passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering Factored" name="Sending a message with an order 2" time="0.003417">
+<system-out><![CDATA[Given Romeo buy a drink.....................................................passed
+When an order is declared for Jerry.........................................passed
+And a message saying "Hi!" is added.........................................passed
+Then the ticket must say "From Romeo to Jerry: Hi!".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering Paramétré" name="Creating another new empty order" time="0.005605">
+<system-out><![CDATA[Given Romeo who wants to buy a drink........................................passed
+When an order is declared for Juliette......................................passed
+Then there is 0 cocktails in the order......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering Paramétré" name="Creating another new empty order 2" time="0.002321">
+<system-out><![CDATA[Given Tom who wants to buy a drink..........................................passed
+When an order is declared for Jerry.........................................passed
+Then there is 0 cocktails in the order......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering Paramétré" name="Sending a message with an order" time="0.00398">
+<system-out><![CDATA[Given Romeo who wants to buy a drink........................................passed
+When an order is declared for Juliette......................................passed
+And a message saying "Wanna chat si zebi?" is added.........................passed
+Then the ticket must say "From Romeo to Juliette: Wanna chat si zebi?"......passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering Paramétré" name="Sending a message with an order 2" time="0.002945">
+<system-out><![CDATA[Given Tom who wants to buy a drink..........................................passed
+When an order is declared for Jerry.........................................passed
+And a message saying "Hi!" is added.........................................passed
+Then the ticket must say "From Tom to Jerry: Hi!"...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering" name="Creating an empty order" time="0.004359">
+<system-out><![CDATA[Given Romeo who wants to buy a drink........................................passed
+When an order is declared for Juliette......................................passed
+Then there is 0 cocktails in the order......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering" name="Creating another new empty order" time="0.002539">
+<system-out><![CDATA[Given Tom who wants to buy a drink..........................................passed
+When an order is declared for Jerry.........................................passed
+Then there is 0 cocktails in the order......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Cocktail Ordering" name="Sending a message with an order" time="0.002819">
+<system-out><![CDATA[Given Romeo who wants to buy a drink........................................passed
+When an order is declared for Juliette......................................passed
+And a message saying "Wanna chat?" is added.................................passed
+Then the ticket must say "From Romeo to Juliette: Wanna chat?"..............passed
+]]></system-out>
+</testcase>
+</testsuite>
