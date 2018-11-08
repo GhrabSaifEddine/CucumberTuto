@@ -1,9 +1,16 @@
 package com;
 
+import net.masterthought.cucumber.Configuration;
+import net.masterthought.cucumber.ReportBuilder;
+import net.masterthought.cucumber.Reportable;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -17,5 +24,27 @@ public class Application {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(Application.class).run(args);
+        File reportOutputDirectory = new File("target");
+        List<String> jsonFiles = new ArrayList<>();
+        jsonFiles.add("target/cucumber.json");
+
+        String buildNumber = "1";
+        String projectName = "cucumberProject";
+        boolean runWithJenkins = false;
+
+        Configuration configuration = new Configuration(reportOutputDirectory, projectName);
+        // optional configuration - check javadoc
+        configuration.setRunWithJenkins(runWithJenkins);
+        configuration.setBuildNumber(buildNumber);
+
+        // addidtional metadata presented on main page
+        configuration.addClassifications("Platform", "Windows");
+        configuration.addClassifications("Browser", "Firefox");
+        configuration.addClassifications("Branch", "release/1.0");
+
+        ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
+        Reportable result = reportBuilder.generateReports();
+        // and here validate 'result' to decide what to do
+        // if report has failed features, undefined steps etc
     }
 }

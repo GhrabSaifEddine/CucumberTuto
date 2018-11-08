@@ -60,7 +60,7 @@
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
-            <version>3.20.0</version>
+            <version>4.2.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
